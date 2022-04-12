@@ -36,6 +36,8 @@ const App = () => {
           element={
             <>
               <Service />
+              <FAQ />
+              <Reviews />
             </>
           }
         />
