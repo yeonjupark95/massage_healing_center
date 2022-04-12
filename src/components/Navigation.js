@@ -6,9 +6,7 @@ const Navigation = () => {
   return (
     <>
       <div className="nav-container">
-        <Link to="/" style={{ textDecoration: "none" }}>
           <div className="logo">Massage Healing Center</div>
-        </Link>
         <div className="nav-categories-container">
           <div className="facials-link">Facials</div>
           <div className="plant-categories-link">Massage</div>
