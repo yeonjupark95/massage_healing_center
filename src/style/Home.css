@@ -5,17 +5,18 @@
 /* 
 font-family: "Vazirmatn", sans-serif; */
 
-.homepage-hysonic-container {
+.homepage-service-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin-bottom: 96px;
-  background-color: #ffffff;
-  padding: 48px 0px 0px 0px;
+  background-color: #f2f2f2cb;
+  padding: 0px;
 }
 
-.homepage-hysonic-img {
+.homepage-service-img {
   margin-right: 64px;
+  width: 1000px;
 }
 
 .homepage-copy-container {
@@ -26,6 +27,7 @@ font-family: "Vazirmatn", sans-serif; */
 .homepage-header {
   font-family: 'Noto Serif', serif;
   font-size: 48px;
+  color:rgb(57, 57, 57);
   line-height: 58px;
   padding-top: 16vh;
   font-weight: 400;
@@ -36,6 +38,7 @@ font-family: "Vazirmatn", sans-serif; */
 
 .homepage-subhead {
   font-family: "Vazirmatn", sans-serif;
+  color:rgb(115, 115, 115);
   font-size: 20px;
   line-height: 30px;
   font-weight: 300;
@@ -44,16 +47,21 @@ font-family: "Vazirmatn", sans-serif; */
   margin-bottom: 24px;
 }
 
-.homepage-hysonic-button {
+.homepage-service-button {
   width: fit-content;
   padding: 10px 24px 8px 24px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
   background-color: #ffffff00;
-  color: rgb(0, 0, 0);
-  border: solid;
+  color: rgb(57, 57, 57);
+  border: solid 2px;
   display: flex;
   align-self: left;
   text-decoration: none;
+}
+
+.homepage-service-button:hover {
+  background-color: #010101da;
+  color: white;
 }

@@ -1,26 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../style/Home.css";
+import facial from "../img/home-facial.png";
+import massage from "../img/home-massage.jpeg";
 
 const Service = () => {
   return (
     <>
-      <h1> Our Services </h1>
-      <div className="service">
-        <div> The Step Your Routine Is Missing </div>
-        <div>
-          Facials supercharge your skincare routine, make your home care work
-          harder, and help you reach your goals
+      <div className="homepage-service-container">
+        <img className="homepage-service-img" src={facial} alt="hysonic" />
+        <div className="homepage-copy-container">
+          <div className="homepage-header">
+            Personalized Facials, Without The Fuss.
+          </div>
+          <div className="homepage-subhead">
+            Using the best Korean technology
+          </div>
+          <button className="homepage-service-button">Book A Facial</button>
         </div>
-        <button> Book A Facial </button>
       </div>
-      <div className="service">
-        <div> The Step Your Routine Is Missing </div>
-        <div>
-          Facials supercharge your skincare routine, make your home care work
-          harder, and help you reach your goals
+      <div className="homepage-service-container">
+        <img className="homepage-service-img" src={massage} alt="hysonic" />
+        <div className="homepage-copy-container">
+          <div className="homepage-header">
+            Korean Deep Tissue Massage
+          </div>
+          <div className="homepage-subhead">
+            Using the best Korean technology
+          </div>
+          <button className="homepage-service-button">Book A Facial</button>
         </div>
-        <button> Book A Massage </button>
       </div>
     </>
   );
