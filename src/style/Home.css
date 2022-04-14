@@ -1,5 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400&display=swap");
+
 /* 
 font-family: "Vazirmatn", sans-serif; */
-h1 {
+
+.homepage-hysonic-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 96px;
+  background-color: #ffffff;
+  padding: 48px 0px 0px 0px;
+}
+
+.homepage-hysonic-img {
+  margin-right: 64px;
+}
+
+.homepage-copy-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.homepage-header {
   font-family: 'Noto Serif', serif;
+  font-size: 48px;
+  line-height: 58px;
+  padding-top: 16vh;
+  font-weight: 400;
+  text-align: left;
+  width: 420px;
+  margin-bottom: 16px;
+}
+
+.homepage-subhead {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: left;
+  width: 420px;
+  margin-bottom: 24px;
+}
+
+.homepage-hysonic-button {
+  width: fit-content;
+  padding: 10px 24px 8px 24px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #ffffff00;
+  color: rgb(0, 0, 0);
+  border: solid;
+  display: flex;
+  align-self: left;
+  text-decoration: none;
 }
