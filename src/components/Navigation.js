@@ -6,11 +6,11 @@ const Navigation = () => {
   return (
     <>
       <div className="nav-container">
-          <div className="logo">Massage Healing Center</div>
+        <div className="logo">Massage Healing Center</div>
         <div className="nav-categories-container">
-          <div className="facials-link">Facials</div>
-          <div className="plant-categories-link">Massage</div>
-          <div className="plant-categories-link">Appointments</div>
+          <div className="service-link">Facials</div>
+          <div className="service-link">Massage</div>
+          <div className="service-link">Appointments</div>
         </div>
       </div>
     </>
