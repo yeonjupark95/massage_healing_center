@@ -16,7 +16,7 @@ font-family: "Vazirmatn", sans-serif; */
 
 .homepage-service-img {
   margin-right: 64px;
-  width: 1000px;
+  width: 640px;
 }
 
 .homepage-copy-container {
@@ -49,7 +49,7 @@ font-family: "Vazirmatn", sans-serif; */
 
 .homepage-service-button {
   width: fit-content;
-  padding: 10px 24px 8px 24px;
+  padding: 10px 24px 10px 24px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
@@ -59,6 +59,7 @@ font-family: "Vazirmatn", sans-serif; */
   display: flex;
   align-self: left;
   text-decoration: none;
+  margin-bottom: 10vh;
 }
 
 .homepage-service-button:hover {
