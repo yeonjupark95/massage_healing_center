@@ -9,6 +9,7 @@ import Reviews from "./Home/Reviews";
 import Facial from "./Service/Facial";
 import Massage from "./Service/Massage";
 import AboutUs from "./AboutUs";
+import Appointment from "./Service/Appointment";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
@@ -46,9 +47,25 @@ const App = () => {
             </>
           }
         />
-        <Route path="/facials" element={Facial} />
-        <Route path="/massage" element={Massage} />
-        <Route path="/aboutus" element={AboutUs} />
+        <Route
+          path="/facials"
+          element={
+            <>
+              <Appointment />
+              <Facial />
+            </>
+          }
+        />
+        <Route
+          path="/massage"
+          element={
+            <>
+              <Massage />
+              <Appointment />
+            </>
+          }
+        />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </div>
   );
