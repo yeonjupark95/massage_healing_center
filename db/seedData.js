@@ -77,11 +77,11 @@ const rebuildDB = async () => {
     await dropTables();
     await createInitialService();
   } catch (error) {
+    console.log("Error during rebuildDB");
     throw error;
   }
 };
 
 module.exports = {
-    rebuildDB,
-  };
-  
+  rebuildDB,
+};
