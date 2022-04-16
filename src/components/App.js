@@ -6,6 +6,9 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./Home/Home";
 import Service from "./Home/Service";
 import Reviews from "./Home/Reviews";
+import Facial from "./Service/Facial";
+import Massage from "./Service/Massage";
+import AboutUs from "./AboutUs";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
@@ -43,9 +46,10 @@ const App = () => {
             </>
           }
         />
+        <Route path="/facials" element={Facial} />
+        <Route path="/massage" element={Massage} />
+        <Route path="/aboutus" element={AboutUs} />
       </Routes>
-      <h1>Hello, World!</h1>
-      <p>API Status: {APIHealth}</p>
     </div>
   );
 };

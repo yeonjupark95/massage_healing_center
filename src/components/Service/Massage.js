@@ -2,6 +2,6 @@ import React from "react";
 import "../../style/Service.css";
 
 const Massage = () => {
-  return <>Facial</>;
+  return <>Massage</>;
 };
 export default Massage;
