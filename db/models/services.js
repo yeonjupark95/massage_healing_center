@@ -3,10 +3,12 @@ const client = require("../client");
 const createService = async ({ name, description, category, price }) => {
   try {
     const {
-      row: [service],
+      rows: [service],
     } = await client.query(
       `
-        INSERT INTO service (name, description, category, price)
+          INSERT INTO services (name, description, category, price)
+          VALUES ($1, $2, $3, $4)
+          RETURNING *;
       `,
       [name, description, category, price]
     );
@@ -16,23 +18,21 @@ const createService = async ({ name, description, category, price }) => {
   }
 };
 
-const getServiceById = async (id) => {
+const getServiceByCategory = async (category) => {
   try {
-    const {
-      rows: [service],
-    } = await client.query(
-      `SELECT * FROM service
-            WHERE id = $1;
-            `,
-      [id]
+    const { rows: services } = await client.query(
+      ` SELECT * FROM services
+        WHERE category = $1;
+      `,
+      [category]
     );
-    return service;
+    return services;
   } catch (error) {
     throw error;
   }
 };
 
 module.exports = {
-  getServiceById,
+  getServiceByCategory,
   createService,
 };
