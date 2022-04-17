@@ -35,3 +35,16 @@ export const login = async (username, password) => {
     throw error;
   }
 };
+
+export const fetchUser = async (token) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/users/admin`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};

@@ -14,7 +14,7 @@ import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
 import "../style/App.css";
-import { login } from "../axios-services";
+import { fetchUser } from "../axios-services";
 
 const App = () => {
   const [APIHealth, setAPIHealth] = useState("");
@@ -32,11 +32,24 @@ const App = () => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
 
-  const handleLogout = async() => {
+  const handleUser = async () => {
+    if (token) {
+      const userObject = await fetchUser(token);
+      setUser(userObject);
+    } else {
+      setUser({});
+    }
+  };
+
+  const handleLogout = async () => {
     navigate("/");
     setToken("");
     localStorage.removeItem("token");
-  }
+  };
+
+  useEffect(() => {
+    handleUser();
+  }, [token]);
 
   return (
     <div className="app-container">
@@ -71,7 +84,7 @@ const App = () => {
           }
         />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/hyelyon" element={<AdminLogin />} />
+        <Route path="/hyelyon" element={<AdminLogin setToken={setToken}/>} />
       </Routes>
     </div>
   );

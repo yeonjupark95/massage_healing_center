@@ -1,0 +1,88 @@
+.account-form-container {
+  margin-top: 24vh;
+  margin-bottom: 24vh;
+  display: flex;
+  justify-content: center;
+}
+
+.account-form-content-container {
+  display: flex;
+  flex-direction: column;
+  background-color:#75818487;
+  justify-content: center;
+  padding: 40px;
+  width: 360px;
+}
+
+.account-form-header {
+font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #5D5B6A;
+  margin-bottom: 40px;
+}
+
+.account-form-content {
+  display: flex;
+  color: #5D5B6A;
+  font-family: 'Lexend Deca', sans-serif;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.account-form-label {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.account-form-input {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  border: 1px solid #e8ddc9;
+  border-radius: 4px;
+}
+
+.account-form-input:focus {
+  outline: none;
+}
+
+.account-form-button {
+    width: fit-content;
+    padding: 10px 24px 10px 24px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    background-color: #5D5B6A;
+    color: white;
+    border: solid 2px;
+    display: flex;
+    align-self: left;
+    text-decoration: none;
+    margin-bottom: 10vh;
+}
+
+.account-form-button:hover {
+  background-color: #224229;
+  color: black;
+}
+
+.account-form-additional {
+  margin-top: 40px;
+}
+
+.account-form-additional-path {
+  color: #1161ff;
+  text-decoration: none;
+}
+
+.err-message {
+  font-size: 14px;
+  font-weight: 400;
+  color: #970202;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  line-height: 18px;
+}
