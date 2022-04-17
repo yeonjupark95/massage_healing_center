@@ -8,10 +8,24 @@ return (
       <div className="faq-header">Frequently Asked Questions</div>
       <div className="faq-question">What is LDM (Local Dynamic Micro) water drop lifting technology? </div>
       <div className="faq-answer">
-        Helen has been a Licensed Massage Therapist for over 10 years and is also a licensed aesthetician. <br />
-        As Helen lived in Korea for the majority of her life, she is well aware of the popular technologies used among the aestheticians in Korea.
-        <br />
-        If you have any questions regarding her service, please text her at 214-668-7839.
+        Local Dynamic Micro water drop lifting provides lifting and skin regeneration at once. <br />
+        The skin regeneration properties of LDM procedure is effective for scar healing, wound healing and redness reduction. <br />
+        LDM can be used to treat both dermatology and aesthetic procedures. It can also be used in conjunction with other aesthetic procedures to facilitate desired results. <br />
+      </div>
+      <div className="faq-question">Which facial service should I book? </div>
+      <div className="faq-answer">
+        Local Dynamic Micro water drop lifting provides lifting and skin regeneration at once. <br />
+        The skin regeneration properties of LDM procedure is effective for scar healing, wound healing and redness reduction. <br />
+        LDM can be used to treat both dermatology and aesthetic procedures. It can also be used in conjunction with other aesthetic procedures to facilitate desired results. <br />
+      </div>
+      <div className="faq-question">Which facial service should I book? </div>
+      <div className="faq-answer">
+        Local Dynamic Micro water drop lifting provides lifting and skin regeneration at once. <br />
+        The skin regeneration properties of LDM procedure is effective for scar healing, wound healing and redness reduction. <br />
+        LDM can be used to treat both dermatology and aesthetic procedures. It can also be used in conjunction with other aesthetic procedures to facilitate desired results. <br />
+      </div>
+      <div className="faq-answer">
+        If you still have any questions regarding our service, please text Helen at 214-668-7839.
       </div>
     </div>
     </>
