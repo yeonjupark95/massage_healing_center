@@ -4,9 +4,36 @@
   margin-top: 500px;
 }
 
+
+
 .service-menu-title {
   font-family: "DM Serif Display", serif;
   margin-top: 10vh;
+  text-align: center;
   font-size: 50px;
   color: #5d5b6a;
+}
+
+.service-container{
+    margin: 10vh;
+}
+
+.service-title,
+.service-description {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.service-title {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 1vh;
+  color: #5d5b6a;
+}
+
+.service-description {
+    color: #5d5b6ab0;
+}
+
+.service-name {
+  margin-right: 40px;
 }

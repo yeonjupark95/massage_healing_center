@@ -96,7 +96,14 @@ const createInitialServices = async () => {
       price: 129,
     });
 
-    const services = [service1, service2, service3, service4];
+    const service5 = await createService({
+      name: "Half Massage Half Facial Service",
+      description: "Body massage with enzyme peel facial",
+      category: "both",
+      price: 175,
+    });
+
+    const services = [service1, service2, service3, service4, service5];
     console.log("success creating initial services!");
     console.log("services created:", services);
   } catch (error) {
