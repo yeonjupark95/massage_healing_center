@@ -3,10 +3,12 @@ const client = require("../client");
 const createService = async ({ name, description, category, price }) => {
   try {
     const {
-      row: [service],
+      rows: [service],
     } = await client.query(
       `
-        INSERT INTO service (name, description, category, price)
+          INSERT INTO services (name, description, category, price)
+          VALUES ($1, $2, $3, $4)
+          RETURNING *;
       `,
       [name, description, category, price]
     );
