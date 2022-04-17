@@ -62,3 +62,33 @@
   background-color: #5D5B6A;
   color: white;
 }
+
+.faq-header {
+  font-family: "DM Serif Display", serif;
+  color: #5D5B6A;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  font-family: "Lexend Deca", sans-serif;
+  color: #758184;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.faq-answer {
+  font-family: "Lexend Deca", sans-serif;
+  color: #758184;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 48px;
+}
