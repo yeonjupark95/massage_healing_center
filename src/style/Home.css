@@ -1,17 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400&display=swap");
-
-/* 
-font-family: "Vazirmatn", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend+Deca:wght@100;200;300;900&family=Noto+Sans:wght@300&family=Noto+Serif:ital@1&family=Vazirmatn:wght@100;200;300;400&display=swap");
 
 .homepage-service-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 96px;
-  background-color: #f2f2f2cb;
-  padding: 0px ;
+  background-color: #EBE6E6;
+  padding: 0px;
 }
 
 .homepage-service-img {
@@ -25,9 +20,9 @@ font-family: "Vazirmatn", sans-serif; */
 }
 
 .homepage-header {
-  font-family: 'Noto Serif', serif;
+  font-family: 'DM Serif Display', serif;
   font-size: 48px;
-  color:rgb(57, 57, 57);
+  color: #5D5B6A;
   line-height: 58px;
   padding-top: 16vh;
   font-weight: 400;
@@ -37,8 +32,8 @@ font-family: "Vazirmatn", sans-serif; */
 }
 
 .homepage-subhead {
-  font-family: "Vazirmatn", sans-serif;
-  color:rgb(115, 115, 115);
+  font-family: 'Lexend Deca', sans-serif;
+  color: #758184;
   font-size: 20px;
   line-height: 30px;
   font-weight: 300;
@@ -50,11 +45,12 @@ font-family: "Vazirmatn", sans-serif; */
 .homepage-service-button {
   width: fit-content;
   padding: 10px 24px 10px 24px;
-  font-size: 18px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
   line-height: 18px;
   font-weight: 400;
   background-color: #ffffff00;
-  color: rgb(57, 57, 57);
+  color: #758184;
   border: solid 2px;
   display: flex;
   align-self: left;
@@ -63,6 +59,6 @@ font-family: "Vazirmatn", sans-serif; */
 }
 
 .homepage-service-button:hover {
-  background-color: #010101da;
+  background-color: #5D5B6A;
   color: white;
 }
