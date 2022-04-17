@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 // you can think of that directory as a collection of api adapters
 // where each adapter fetches specific info from our express server's /api route
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Home from "./Home/Home";
 import Service from "./Home/Service";
 import Reviews from "./Home/Reviews";
 import Facial from "./Service/Facial";
@@ -40,7 +39,6 @@ const App = () => {
           path="/"
           element={
             <>
-              <Home />
               <Service />
               <FAQ />
               <Reviews />
