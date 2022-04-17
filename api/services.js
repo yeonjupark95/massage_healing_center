@@ -5,7 +5,7 @@ servicesRouter.get("/categories/:category", async (req, res, next) => {
   const { category } = req.params;
   try {
     const services = await getServiceByCategory(category);
-    res.send = services;
+    res.send(services);
   } catch (error) {
     next(error);
   }

@@ -56,7 +56,7 @@ const createInitialServices = async () => {
       name: "Korean Deep Tissue Massage - 60 minute",
       description:
         "Specifically designed for those who require relief of deep aches and pains in targeted areas using accupressure points. Includes radio frequency and LED light therapy",
-      category: "facial",
+      category: "massage",
       price: 91,
     });
 
@@ -64,7 +64,7 @@ const createInitialServices = async () => {
       name: "Korean Deep Tissue Massage - 90 minute",
       description:
         "Specifically designed for those who require relief of deep aches and pains in targeted areas using accupressure points. Includes radio frequency and LED light therapy",
-      category: "facial",
+      category: "massage",
       price: 129,
     });
 
