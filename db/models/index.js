@@ -1,5 +1,5 @@
 module.exports = {
-  ...require("./service"),
+  ...require("./services"),
 };
 
 // then, in your API, you'll require the appropriate model
