@@ -18,23 +18,21 @@ const createService = async ({ name, description, category, price }) => {
   }
 };
 
-const getServiceById = async (id) => {
+const getServiceByCategory = async (category) => {
   try {
-    const {
-      rows: [service],
-    } = await client.query(
-      `SELECT * FROM service
-            WHERE id = $1;
-            `,
-      [id]
+    const { rows: services } = await client.query(
+      ` SELECT * FROM services
+        WHERE category = $1;
+      `,
+      [category]
     );
-    return service;
+    return services;
   } catch (error) {
     throw error;
   }
 };
 
 module.exports = {
-  getServiceById,
+  getServiceByCategory,
   createService,
 };

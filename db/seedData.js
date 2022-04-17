@@ -36,14 +36,15 @@ const createTables = async () => {
 const createInitialServices = async () => {
   try {
     console.log("Trying to create initial service");
-    const serviceOne = await createService({
+    const service1 = await createService({
       name: "Deep Cleaning Enzyme Peel Facial",
       description:
         "Deep cleaning, ultra sonic skin scrubber, enzyme peel, hydrating mask, and calming mask",
       category: "facial",
       price: 85,
     });
-    const serviceTwo = await createService({
+
+    const service2 = await createService({
       name: "Aqua Peel Facial",
       description:
         "Deep cleaning, aqua peel machine, cooling ultrasound machine, hydrating mask, and calming mask",
@@ -51,7 +52,7 @@ const createInitialServices = async () => {
       price: 95,
     });
 
-    const serviceThree = await createService({
+    const service3 = await createService({
       name: "Korean Deep Tissue Massage - 60 minute",
       description:
         "Specifically designed for those who require relief of deep aches and pains in targeted areas using accupressure points. Includes radio frequency and LED light therapy",
@@ -59,7 +60,7 @@ const createInitialServices = async () => {
       price: 91,
     });
 
-    const serviceFour = await createService({
+    const service4 = await createService({
       name: "Korean Deep Tissue Massage - 90 minute",
       description:
         "Specifically designed for those who require relief of deep aches and pains in targeted areas using accupressure points. Includes radio frequency and LED light therapy",
@@ -67,9 +68,9 @@ const createInitialServices = async () => {
       price: 129,
     });
 
-    const service = [serviceOne, serviceTwo, serviceThree, serviceFour];
-    console.log("success creating initial service!");
-    console.log("service created:", service);
+    const services = [service1, service2, service3, service4];
+    console.log("success creating initial services!");
+    console.log("services created:", services);
   } catch (error) {
     throw error;
   }

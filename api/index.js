@@ -1,18 +1,20 @@
 //routes file
-const apiRouter = require('express').Router();
+const apiRouter = require("express").Router();
 
-apiRouter.get('/', (req, res, next) => {
+apiRouter.get("/", (req, res, next) => {
   res.send({
-    message: 'API is under construction!',
+    message: "API is under construction!",
   });
 });
 
-apiRouter.get('/health', (req, res, next) => {
+apiRouter.get("/health", (req, res, next) => {
   res.send({
     healthy: true,
   });
 });
 
 // place your routers here
+const servicesRouter = require("./services");
+apiRouter.use("/services", servicesRouter);
 
 module.exports = apiRouter;
