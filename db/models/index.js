@@ -1,5 +1,6 @@
 module.exports = {
   ...require("./services"),
+  ...require("./users"),
 };
 
 // then, in your API, you'll require the appropriate model

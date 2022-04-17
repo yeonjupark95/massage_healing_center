@@ -1,11 +1,12 @@
 const client = require("./client");
-const { createService } = require("./models");
+const { createService, createUser } = require("./models");
 
 const dropTables = async () => {
   try {
     console.log("Dropping All Tables...");
     await client.query(`
         DROP TABLE IF EXISTS services;
+        DROP TABLE IF EXISTS users;
     `);
     console.log("Finished dropping tables...");
   } catch (error) {
@@ -18,6 +19,12 @@ const createTables = async () => {
     console.log("Starting to build tables...");
 
     await client.query(`
+    CREATE TABLE users(
+      id SERIAL PRIMARY KEY,
+      username VARCHAR(255) UNIQUE NOT NULL,
+      password VARCHAR(255) UNIQUE NOT NULL
+    );
+
     CREATE TABLE services (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
@@ -29,6 +36,27 @@ const createTables = async () => {
     console.log("Finished building tables!");
   } catch (error) {
     console.error("Error building tables!");
+    throw error;
+  }
+};
+
+const createInitialUsers = async () => {
+  try {
+    console.log("Trying to create initial user");
+    const user1 = await createUser({
+      username: "helen",
+      password: "helenhelen",
+    });
+
+    const user2 = await createUser({
+      username: "yeonju",
+      password: "yeonjuyeonju",
+    });
+
+    const users = [user1, user2];
+    console.log("success creating initial users!");
+    console.log("Users created:", users);
+  } catch (error) {
     throw error;
   }
 };
@@ -81,6 +109,7 @@ const rebuildDB = async () => {
     client.connect();
     await dropTables();
     await createTables();
+    await createInitialUsers();
     await createInitialServices();
   } catch (error) {
     console.log("Error during rebuildDB");

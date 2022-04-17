@@ -4,15 +4,15 @@ import "../../style/Service.css";
 import { fetchCategory } from "../../axios-services/index";
 
 const Facial = () => {
-  const [services, setServices] = useState([]);
+  const [facials, setFacials] = useState([]);
 
-  const handleServices = async () => {
-    const fetchedServices = await fetchCategory("facial");
-    setServices(fetchedServices);
+  const handleFacials = async () => {
+    const fetchedFacials = await fetchCategory("facial");
+    setFacials(fetchedFacials);
   };
 
   useEffect(() => {
-    handleServices();
+    handleFacials();
   }, []);
 
   return (
@@ -20,7 +20,7 @@ const Facial = () => {
       <Appointment />
       <div className="service-menu-title">Facial</div>
       <div className="service-menu-container">
-        {services.map((service) => {
+        {facials.map((service) => {
           const { id, name, description, price } = service;
           return (
             <>
