@@ -9,27 +9,34 @@ import Facial from "./Service/Facial";
 import Massage from "./Service/Massage";
 import AboutUs from "./AboutUs";
 import Appointment from "./Service/Appointment";
+import AdminLogin from "./Admin/AdminLogin";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
 import "../style/App.css";
+import { login } from "../axios-services";
 
 const App = () => {
   const [APIHealth, setAPIHealth] = useState("");
 
   useEffect(() => {
-    // follow this pattern inside your useEffect calls:
-    // first, create an async function that will wrap your axios service adapter
-    // invoke the adapter, await the response, and set the data
     const getAPIStatus = async () => {
       const { healthy } = await getAPIHealth();
       setAPIHealth(healthy ? "api is up! :D" : "api is down :/");
     };
 
-    // second, after you've defined your getter above
-    // invoke it immediately after its declaration, inside the useEffect callback
     getAPIStatus();
   }, []);
+
+  const [token, setToken] = useState("");
+  const [user, setUser] = useState({});
+  const navigate = useNavigate();
+
+  const handleLogout = async() => {
+    navigate("/");
+    setToken("");
+    localStorage.removeItem("token");
+  }
 
   return (
     <div className="app-container">
@@ -64,6 +71,7 @@ const App = () => {
           }
         />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/hyelyon" element={<AdminLogin />} />
       </Routes>
     </div>
   );

@@ -11,7 +11,7 @@ const Service = () => {
         <img className="homepage-service-img" src={facial} alt="hysonic" />
         <div className="homepage-copy-container">
           <div className="homepage-header">
-            Regenerate youthful Glow with Facials
+            Regenerate Youthful Glow with Facials
           </div>
           <div className="homepage-subhead">
             Using the best Korean Local Dynamic Micro (LDM) water drop lifting technology
@@ -26,7 +26,7 @@ const Service = () => {
             Korean Deep Tissue Massage
           </div>
           <div className="homepage-subhead">
-            Personalized massage to release your body stress, aches, and long-term pain
+            Personalized massage to release your body stress, aches, and chronic pain
           </div>
           <button className="homepage-service-button">Book A Massage</button>
         </div>

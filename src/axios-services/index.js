@@ -21,3 +21,17 @@ export const fetchCategory = async (category) => {
     throw error;
   }
 };
+
+export const login = async (username, password) => {
+  try {
+    const { data } = await axios.post(`${BASE_URL}/users/login`, {
+      username,
+      password,
+    });
+    const { token, message } = data;
+    return [token, message];
+  } catch (error) {
+    console.dir(error);
+    throw error;
+  }
+};
