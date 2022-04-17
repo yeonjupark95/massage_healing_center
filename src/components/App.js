@@ -41,11 +41,17 @@ const App = () => {
     }
   };
 
-  const handleLogout = async () => {
+  const handleLogOut = async () => {
     navigate("/");
     setToken("");
     localStorage.removeItem("token");
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token"));
+    }
+  }, []);
 
   useEffect(() => {
     handleUser();
@@ -53,7 +59,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navigation />
+      <Navigation token={token} handleLogOut={handleLogOut}/>
       <Routes>
         <Route
           path="/"
@@ -84,7 +90,8 @@ const App = () => {
           }
         />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/hyelyon" element={<AdminLogin setToken={setToken}/>} />
+        <Route path="/hyelyon" element={<AdminLogin setToken={setToken} />} />
+        <Route path="/admin/addservice" element={<></>} />
       </Routes>
     </div>
   );

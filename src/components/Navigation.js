@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../style/Navigation.css";
 
-const Navigation = () => {
+const Navigation = ({ token, handleLogOut }) => {
   return (
     <>
       <div className="nav-container">
@@ -25,6 +25,16 @@ const Navigation = () => {
           <Link to="/aboutus" style={{ textDecoration: "none" }}>
             <div className="service-link">About Us</div>
           </Link>
+          {token && (
+            <Link to="/admin/addservice" style={{ textDecoration: "none" }}>
+              <div className="service-link">Admin</div>
+            </Link>
+          )}
+          {token && (
+            <button onClick={handleLogOut} className="account-logout-button">
+              Logout
+            </button>
+          )}
         </div>
       </div>
     </>

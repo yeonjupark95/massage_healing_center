@@ -30,12 +30,12 @@ usersRouter.post("/login", async (req, res, next) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     next(error);
   }
 });
 
-usersRouter.get("/admin", requireUser, async (req, res, next) => {
+usersRouter.get("/admin", async (req, res, next) => {
   try {
     res.send(req.user);
   } catch (error) {
