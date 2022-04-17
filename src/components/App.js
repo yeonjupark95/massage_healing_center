@@ -3,8 +3,13 @@ import React, { useState, useEffect } from "react";
 // you can think of that directory as a collection of api adapters
 // where each adapter fetches specific info from our express server's /api route
 import { Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./Home/Home";
 import Service from "./Home/Service";
 import Reviews from "./Home/Reviews";
+import Facial from "./Service/Facial";
+import Massage from "./Service/Massage";
+import AboutUs from "./AboutUs";
+import Appointment from "./Service/Appointment";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
@@ -35,13 +40,33 @@ const App = () => {
           path="/"
           element={
             <>
+              <Home />
               <Service />
+              <FAQ />
+              <Reviews />
             </>
           }
         />
+        <Route
+          path="/facials"
+          element={
+            <>
+              <Appointment />
+              <Facial />
+            </>
+          }
+        />
+        <Route
+          path="/massage"
+          element={
+            <>
+              <Massage />
+              <Appointment />
+            </>
+          }
+        />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-      <h1>Hello, World!</h1>
-      <p>API Status: {APIHealth}</p>
     </div>
   );
 };
