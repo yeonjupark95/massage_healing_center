@@ -97,7 +97,7 @@ const createInitialServices = async () => {
     });
 
     const service5 = await createService({
-      name: "Half Massage Half Facial Service",
+      name: "Massage and Facial Service",
       description: "Body massage with enzyme peel facial",
       category: "both",
       price: 175,

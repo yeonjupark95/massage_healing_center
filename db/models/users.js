@@ -84,7 +84,6 @@ const getUser = async ({ username, password }) => {
 };
 
 module.exports = {
-  // add your database adapter fns here
   getAllUsers,
   createUser,
   getUserByUsername,
