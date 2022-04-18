@@ -50,7 +50,7 @@ servicesRouter.post("/add", async (req, res, next) => {
   }
 });
 
-servicesRouter.patch("/:serviceId", async (req, res, next) => {
+servicesRouter.patch("/update/:serviceId", async (req, res, next) => {
   const { serviceId } = req.params;
   const { name, description, category, price } = req.body;
 
@@ -79,7 +79,7 @@ servicesRouter.patch("/:serviceId", async (req, res, next) => {
   }
 });
 
-servicesRouter.delete("/:serviceId", async (req, res, next) => {
+servicesRouter.delete("/delete/:serviceId", async (req, res, next) => {
   const { serviceId } = req.params;
   try {
     const deletedService = await deleteService(serviceId);

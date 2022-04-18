@@ -13,10 +13,10 @@ export async function getAPIHealth() {
 
 export const fetchServiceById = async (serviceId) => {
   try {
-    const { data } = await axios.get(
-      `${BASE_URL}/services/categories/${serviceId}`
+    const { data: service } = await axios.get(
+      `${BASE_URL}/services/${serviceId}`
     );
-    return data;
+    return service;
   } catch (error) {
     throw error;
   }
@@ -87,7 +87,7 @@ export const createService = async (
 
 export const deleteService = async (token, serviceId) => {
   try {
-    const { data } = await axios.delete(`${BASE_URL}/services/${serviceId}`, {
+    const { data } = await axios.delete(`${BASE_URL}/services/delete/${serviceId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -100,11 +100,11 @@ export const deleteService = async (token, serviceId) => {
 
 export const updateService = async (
   token,
-  { serviceId, name, description, category, price }
+  serviceId, {name, description, category, price }
 ) => {
   try {
     const { data: service } = await axios.patch(
-      `${BASE_URL}/services/${serviceId}`,
+      `${BASE_URL}/services/update/${serviceId}`,
       {
         name,
         description,

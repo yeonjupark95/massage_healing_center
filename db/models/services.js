@@ -60,13 +60,13 @@ const getServiceByCategory = async (category) => {
 
 const getServiceById = async (id) => {
   try {
-    const { rows: services } = await client.query(
+    const { rows: [service] } = await client.query(
       ` SELECT * FROM services
         WHERE id = $1;
       `,
       [id]
     );
-    return services;
+    return service;
   } catch (error) {
     throw error;
   }

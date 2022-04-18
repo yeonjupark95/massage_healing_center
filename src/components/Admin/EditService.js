@@ -13,7 +13,6 @@ const EditService = ({ token }) => {
     try {
       const singleService = await fetchServiceById(serviceId);
       setService(singleService);
-      console.log(singleService);
     } catch (error) {
       console.error(error);
     }
@@ -22,7 +21,11 @@ const EditService = ({ token }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const updatedService = await updateService(token, editedService);
+      const updatedService = await updateService(
+        token,
+        serviceId,
+        editedService
+      );
       setService(updatedService);
       setEditedService(updatedService);
     } catch (error) {
@@ -32,24 +35,21 @@ const EditService = ({ token }) => {
 
   useEffect(() => {
     handleService();
-  });
+  }, []);
 
   return (
     <div className="edit-admin-container">
       <div className="edit-service-content">
         <form className="edit-service-container" onSubmit={handleSubmit}>
           <div className="edit-form-content">
-            <Link style={{ textDecoration: "none" }} to="/admin">
-              <div className="back-to-my-account">Back to Dashboard</div>
-            </Link>
-            <div className="my-service-edit-header">Add Service</div>
+            <div className="my-service-edit-header">Edit Service</div>
             <label htmlFor="name" className="my-service-form-label">
               Service Name
             </label>
             <input
               className="my-service-form-input"
               placeholder="Facial and Massage Package"
-              value={editedService.name}
+              defaultValue="hello"
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
@@ -63,7 +63,7 @@ const EditService = ({ token }) => {
             <input
               className="my-service-form-input"
               placeholder="Includes 60 minute massage with deep enzyme facial"
-              value={editedService.description}
+              defaultValue="hello"
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
@@ -77,7 +77,7 @@ const EditService = ({ token }) => {
             <input
               className="my-service-form-input"
               placeholder="Massage"
-              value={editedService.category}
+              defaultValue="hello"
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
@@ -91,7 +91,7 @@ const EditService = ({ token }) => {
             <input
               className="my-service-form-input"
               placeholder="100"
-              value={editedService.price}
+              defaultValue="100"
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
@@ -99,7 +99,7 @@ const EditService = ({ token }) => {
                 });
               }}
             />
-            <button className="edit-my-service-save-button">Edit</button>
+            <button className="edit-my-service-save-button">Save</button>
           </div>
         </form>
       </div>
