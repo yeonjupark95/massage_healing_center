@@ -37,8 +37,8 @@ const Massage = ({ token }) => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
-                {token && <button>Edit</button>}
-                {token && <button>Delete</button>}
+                {token && <button className="service-button">Edit</button>}
+                {token && <button className="service-button">Delete</button>}
               </div>
             );
           })}
@@ -54,8 +54,8 @@ const Massage = ({ token }) => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
-                {token && <button>Edit</button>}
-                {token && <button>Delete</button>}
+                {token && <button className="service-button">Edit</button>}
+                {token && <button className="service-button">Delete</button>}
               </div>
             );
           })}
