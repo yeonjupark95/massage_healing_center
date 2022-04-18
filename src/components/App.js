@@ -10,6 +10,7 @@ import Massage from "./Service/Massage";
 import AboutUs from "./AboutUs";
 import Appointment from "./Service/Appointment";
 import AdminLogin from "./Admin/AdminLogin";
+import AdminDash from "./Admin/AdminDash";
 import AddService from "./Admin/AddService";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
@@ -92,6 +93,7 @@ const App = () => {
         />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/hyelyon" element={<AdminLogin setToken={setToken} />} />
+        <Route path="/admin" element={<AdminDash />} />
         <Route
           path="/admin/addservice"
           element={

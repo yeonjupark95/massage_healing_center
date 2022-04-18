@@ -11,12 +11,20 @@ const AddService = ({ token }) => {
     price: null,
   };
   const [newService, setNewService] = useState(blankService);
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       await createService(token, newService);
       setNewService(newService);
+      if (newService.category === "facial") {
+        navigate("/facials");
+      } else if (newService.category === "massage") {
+        navigate("/massage");
+      } else if (newService.category === "both") {
+        navigate("/facials");
+      }
     } catch (error) {
       console.dir(error);
     }
@@ -27,8 +35,8 @@ const AddService = ({ token }) => {
       <div className="edit-service-content">
         <form className="edit-service-container" onSubmit={handleSubmit}>
           <div className="edit-form-content">
-            <Link style={{ textDecoration: "none" }} to="/">
-              <div className="back-to-my-account">Back to All Service</div>
+            <Link style={{ textDecoration: "none" }} to="/admin">
+              <div className="back-to-my-account">Back to Dashboard</div>
             </Link>
             <div className="my-service-edit-header">Add Service</div>
             <label htmlFor="name" className="my-service-form-label">
@@ -61,12 +69,12 @@ const AddService = ({ token }) => {
             </label>
             <input
               className="my-service-form-input"
-              placeholder="thrives in environments that..."
+              placeholder="Massage"
               value={newService.category}
               onChange={(event) => {
                 setNewService({
                   ...newService,
-                  description: event.target.value,
+                  category: event.target.value.toLowerCase(),
                 });
               }}
             />

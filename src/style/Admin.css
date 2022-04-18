@@ -87,3 +87,42 @@
   margin-bottom: 24px;
   line-height: 18px;
 }
+
+.admin-dashboard-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 18vh;
+  margin-bottom: 104px;
+}
+
+.admin-dashboard-content {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.admin-dashboard-header {
+  font-family: "DM Serif Display", serif;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  margin-bottom: 64px;
+  color: #5d5b6a;
+}
+
+
+.admin-dashboard-links {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-top: 16px;
+  color: #5d5b6a;
+  text-decoration: none;
+  text-align: center;
+}
+
+.admin-dashboard-links:hover {
+  text-decoration: underline;
+}
+

@@ -26,7 +26,7 @@ const Navigation = ({ token, handleLogOut }) => {
             <div className="service-link">About Us</div>
           </Link>
           {token && (
-            <Link to="/admin/addservice" style={{ textDecoration: "none" }}>
+            <Link to="/admin" style={{ textDecoration: "none" }}>
               <div className="service-link">Admin</div>
             </Link>
           )}
