@@ -17,6 +17,16 @@ servicesRouter.get("/categories/:category", async (req, res, next) => {
   }
 });
 
+servicesRouter.get("/:serviceId", async (req, res, next) => {
+  const { serviceId } = req.params;
+  try {
+    const service = await getServiceById(serviceId);
+    res.send(service);
+  } catch (error) {
+    next(error);
+  }
+});
+
 servicesRouter.post("/add", async (req, res, next) => {
   const { name, description, category, price } = req.body;
   try {

@@ -11,6 +11,17 @@ export async function getAPIHealth() {
   }
 }
 
+export const fetchServiceById = async (serviceId) => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/services/categories/${serviceId}`
+    );
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const fetchCategory = async (category) => {
   try {
     const { data: services } = await axios.get(
