@@ -10,6 +10,7 @@ import Massage from "./Service/Massage";
 import AboutUs from "./AboutUs";
 import Appointment from "./Service/Appointment";
 import AdminLogin from "./Admin/AdminLogin";
+import AddService from "./Admin/AddService";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
@@ -59,7 +60,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navigation token={token} handleLogOut={handleLogOut}/>
+      <Navigation token={token} handleLogOut={handleLogOut} />
       <Routes>
         <Route
           path="/"
@@ -91,7 +92,14 @@ const App = () => {
         />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/hyelyon" element={<AdminLogin setToken={setToken} />} />
-        <Route path="/admin/addservice" element={<></>} />
+        <Route
+          path="/admin/addservice"
+          element={
+            <>
+              <AddService token={token} />
+            </>
+          }
+        />
       </Routes>
     </div>
   );
