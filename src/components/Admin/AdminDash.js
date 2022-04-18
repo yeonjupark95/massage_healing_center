@@ -13,16 +13,6 @@ const AdminDash = () => {
               Add Service
             </Link>
           </div>
-          <div className="admin-dashboard-option">
-            <Link to="/admin/editservice" className="admin-dashboard-links">
-              Edit Service
-            </Link>
-          </div>
-          <div className="admin-dashboard-option">
-            <Link to="/admin/deleteservice" className="admin-dashboard-links">
-              Delete Service
-            </Link>
-          </div>
         </div>
       </div>
     </div>

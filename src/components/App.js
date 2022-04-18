@@ -78,7 +78,7 @@ const App = () => {
           element={
             <>
               <Appointment />
-              <Facial />
+              <Facial token={token}/>
             </>
           }
         />
@@ -86,8 +86,8 @@ const App = () => {
           path="/massage"
           element={
             <>
-              <Massage />
               <Appointment />
+              <Massage token={token}/>
             </>
           }
         />
@@ -96,11 +96,7 @@ const App = () => {
         <Route path="/admin" element={<AdminDash />} />
         <Route
           path="/admin/addservice"
-          element={
-            <>
-              <AddService token={token} />
-            </>
-          }
+          element={<AddService token={token} />}
         />
       </Routes>
     </div>

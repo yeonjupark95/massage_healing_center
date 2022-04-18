@@ -3,7 +3,7 @@ import Appointment from "./Appointment";
 import "../../style/Service.css";
 import { fetchCategory } from "../../axios-services/index";
 
-const Facial = () => {
+const Facial = ({ token }) => {
   const [facials, setFacials] = useState([]);
   const [both, setBoth] = useState([]);
 
@@ -37,6 +37,8 @@ const Facial = () => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
+                {token && <button>Edit</button>}
+                {token && <button>Delete</button>}
               </div>
             );
           })}
@@ -52,6 +54,8 @@ const Facial = () => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
+                {token && <button>Edit</button>}
+                {token && <button>Delete</button>}
               </div>
             );
           })}
