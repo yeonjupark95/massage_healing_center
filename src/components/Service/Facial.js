@@ -21,8 +21,15 @@ const Facial = ({ token }) => {
 
   const handleDelete = async (serviceId) => {
     try {
-      await deleteService(token, serviceId);
-      navigate("/facials");
+      const success = await deleteService(token, serviceId);
+      if (success) {
+        const newFacials = facials.filter((facial) => facial.id !== serviceId);
+        const newBoth = both.filter(
+          (bothService) => bothService.id !== serviceId
+        );
+        setFacials(newFacials);
+        setBoth(newBoth);
+      }
     } catch (error) {
       console.error(error);
     }
