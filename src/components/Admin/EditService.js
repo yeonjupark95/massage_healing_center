@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { updateService, fetchServiceById } from "../../axios-services";
 import "../../style/EditService.css";
 
@@ -8,11 +8,13 @@ const EditService = ({ token }) => {
   const [editedService, setEditedService] = useState({});
   const params = useParams();
   const { serviceId } = params;
+  const navigate = useNavigate();
 
   const handleService = async () => {
     try {
       const singleService = await fetchServiceById(serviceId);
       setService(singleService);
+      setEditedService(singleService);
     } catch (error) {
       console.error(error);
     }
@@ -28,6 +30,13 @@ const EditService = ({ token }) => {
       );
       setService(updatedService);
       setEditedService(updatedService);
+      if (updatedService.category === "facial") {
+        navigate("/facials");
+      } else if (updatedService.category === "massage") {
+        navigate("/massage");
+      } else if (updatedService.category === "both") {
+        navigate("/facials");
+      }
     } catch (error) {
       console.error(error);
     }
@@ -49,7 +58,7 @@ const EditService = ({ token }) => {
             <input
               className="my-service-form-input"
               placeholder="Facial and Massage Package"
-              defaultValue="hello"
+              value={editedService.name}
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
@@ -63,10 +72,10 @@ const EditService = ({ token }) => {
             <input
               className="my-service-form-input"
               placeholder="Includes 60 minute massage with deep enzyme facial"
-              defaultValue="hello"
+              value={editedService.description}
               onChange={(event) => {
                 setEditedService({
-                  ...editedService,
+                  ...service,
                   description: event.target.value,
                 });
               }}
@@ -76,8 +85,8 @@ const EditService = ({ token }) => {
             </label>
             <input
               className="my-service-form-input"
-              placeholder="Massage"
-              defaultValue="hello"
+              placeholder="facial, massage, or both"
+              value={editedService.category}
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
@@ -91,7 +100,7 @@ const EditService = ({ token }) => {
             <input
               className="my-service-form-input"
               placeholder="100"
-              defaultValue="100"
+              value={editedService.price}
               onChange={(event) => {
                 setEditedService({
                   ...editedService,
