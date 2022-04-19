@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Appointment from "./Appointment";
 import "../../style/Service.css";
 import { fetchCategory, deleteService } from "../../axios-services/index";
 
 const Massage = ({ token }) => {
+  const navigate = useNavigate();
   const [massage, setMassage] = useState([]);
   const [both, setBoth] = useState([]);
 
@@ -55,7 +57,16 @@ const Massage = ({ token }) => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
-                {token && <button className="service-button">Edit</button>}
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      navigate(`/admin/editservice/${id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
+                )}
                 {token && (
                   <button
                     className="service-button"
@@ -81,7 +92,16 @@ const Massage = ({ token }) => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
-                {token && <button className="service-button">Edit</button>}
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      navigate(`/admin/editservice/${id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
+                )}
                 {token && (
                   <button
                     className="service-button"
