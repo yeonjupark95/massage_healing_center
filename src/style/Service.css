@@ -12,8 +12,8 @@
   color: #5d5b6a;
 }
 
-.service-container{
-    margin: 10vh;
+.service-container {
+  margin: 10vh;
 }
 
 .service-title,
@@ -29,9 +29,29 @@
 }
 
 .service-description {
-    color: #5d5b6ab0;
+  color: #5d5b6ab0;
 }
 
 .service-name {
   margin-right: 40px;
+}
+
+.service-button {
+  width: fit-content;
+  padding: 10px 24px 10px 24px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #5d5b6a;
+  color: white;
+  border: solid 2px;
+  display: flex;
+  align-self: left;
+  text-decoration: none;
+}
+
+.service-button:hover {
+  background-color: #32527b;
+  color: black;
 }

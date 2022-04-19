@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Appointment from "./Appointment";
 import "../../style/Service.css";
-import { fetchCategory } from "../../axios-services/index";
+import { fetchCategory, deleteService } from "../../axios-services/index";
 
-const Massage = () => {
+const Massage = ({ token }) => {
+  const navigate = useNavigate();
   const [massage, setMassage] = useState([]);
   const [both, setBoth] = useState([]);
 
@@ -15,6 +17,24 @@ const Massage = () => {
   const handleBoth = async () => {
     const fetchedBoth = await fetchCategory("both");
     setBoth(fetchedBoth);
+  };
+
+  const handleDelete = async (serviceId) => {
+    try {
+      const success = await deleteService(token, serviceId);
+      if (success) {
+        const newMassage = massage.filter(
+          (singleMassage) => singleMassage.id !== serviceId
+        );
+        const newBoth = both.filter(
+          (bothService) => bothService.id !== serviceId
+        );
+        setMassage(newMassage);
+        setBoth(newBoth);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -37,6 +57,26 @@ const Massage = () => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      navigate(`/admin/editservice/${id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
+                )}
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      handleDelete(id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                )}
               </div>
             );
           })}
@@ -52,6 +92,26 @@ const Massage = () => {
                   <div className="service-price">{price}</div>
                 </div>
                 <div className="service-description">{description}</div>
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      navigate(`/admin/editservice/${id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
+                )}
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      handleDelete(id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                )}
               </div>
             );
           })}

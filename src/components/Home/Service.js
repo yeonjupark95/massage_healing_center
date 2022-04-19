@@ -11,10 +11,10 @@ const Service = () => {
         <img className="homepage-service-img" src={facial} alt="hysonic" />
         <div className="homepage-copy-container">
           <div className="homepage-header">
-            Personalized Facials, Without The Fuss.
+            Regenerate Youthful Glow with Facials
           </div>
           <div className="homepage-subhead">
-            Using the best Korean technology
+            Using the best Korean Local Dynamic Micro (LDM) water drop lifting technology
           </div>
           <button className="homepage-service-button">Book A Facial</button>
         </div>
@@ -26,9 +26,9 @@ const Service = () => {
             Korean Deep Tissue Massage
           </div>
           <div className="homepage-subhead">
-            Using the best Korean technology
+            Personalized massage to release your body stress, aches, and chronic pain
           </div>
-          <button className="homepage-service-button">Book A Facial</button>
+          <button className="homepage-service-button">Book A Massage</button>
         </div>
       </div>
     </>
