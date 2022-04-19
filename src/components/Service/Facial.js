@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Appointment from "./Appointment";
 import "../../style/Service.css";
-import { fetchCategory } from "../../axios-services/index";
+import { fetchCategory, deleteService } from "../../axios-services/index";
 
 const Facial = ({ token }) => {
   const navigate = useNavigate();
@@ -17,6 +17,15 @@ const Facial = ({ token }) => {
   const handleBoth = async () => {
     const fetchedBoth = await fetchCategory("both");
     setBoth(fetchedBoth);
+  };
+
+  const handleDelete = async (serviceId) => {
+    try {
+      await deleteService(token, serviceId);
+      navigate("/facials");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -49,7 +58,16 @@ const Facial = ({ token }) => {
                     Edit
                   </button>
                 )}
-                {token && <button className="service-button">Delete</button>}
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      handleDelete(id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                )}
               </div>
             );
           })}
@@ -77,7 +95,16 @@ const Facial = ({ token }) => {
                     </button>
                   </>
                 )}
-                {token && <button className="service-button">Delete</button>}
+                {token && (
+                  <button
+                    className="service-button"
+                    onClick={() => {
+                      handleDelete(id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                )}
               </div>
             );
           })}

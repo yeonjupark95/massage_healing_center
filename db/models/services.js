@@ -80,7 +80,7 @@ const deleteService = async (id) => {
       `
       DELETE FROM services
       WHERE id = $1
-      RETURINING id;
+      RETURNING id;
     `,
       [id]
     );

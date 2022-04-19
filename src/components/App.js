@@ -13,7 +13,6 @@ import AdminLogin from "./Admin/AdminLogin";
 import AdminDash from "./Admin/AdminDash";
 import AddService from "./Admin/AddService";
 import EditService from "./Admin/EditService";
-import DeleteService from "./Admin/DeleteService";
 import FAQ from "./Home/FAQ";
 import Navigation from "./Navigation";
 import { getAPIHealth } from "../axios-services";
@@ -103,10 +102,6 @@ const App = () => {
         <Route
           path="/admin/editservice/:serviceId"
           element={<EditService token={token} />}
-        />
-        <Route
-          path="/admin/deleteservice/:serviceId"
-          element={<DeleteService token={token} />}
         />
       </Routes>
     </div>

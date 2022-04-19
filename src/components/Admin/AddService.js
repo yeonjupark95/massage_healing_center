@@ -11,6 +11,7 @@ const AddService = ({ token }) => {
     price: null,
   };
   const [newService, setNewService] = useState(blankService);
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -49,6 +50,7 @@ const AddService = ({ token }) => {
               onChange={(event) => {
                 setNewService({ ...newService, name: event.target.value });
               }}
+              required
             />
             <label htmlFor="name" className="my-account-form-label">
               Description
@@ -63,6 +65,7 @@ const AddService = ({ token }) => {
                   description: event.target.value,
                 });
               }}
+              required
             />
             <label htmlFor="name" className="my-service-form-label">
               Category
@@ -77,6 +80,7 @@ const AddService = ({ token }) => {
                   category: event.target.value.toLowerCase(),
                 });
               }}
+              required
             />
             <label htmlFor="name" className="my-account-form-label">
               Price (USD)
@@ -88,6 +92,7 @@ const AddService = ({ token }) => {
               onChange={(event) => {
                 setNewService({ ...newService, price: event.target.value });
               }}
+              required
             />
             <button className="edit-my-service-save-button">Add</button>
           </div>
