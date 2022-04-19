@@ -13,9 +13,9 @@ const AboutUs = () => {
         If you have any questions regarding her service, please text her at 214-668-7839.
       </div>
       <div className="about-header">Meet Yeonju</div>
-      <div className="about-subheader">Software Developer</div>
+      <div className="about-subheader">Software Engineer</div>
       <div className="about-content">
-        Yeonju is an Aggie chemical engineer (class of 2019) and also just graduated from a full stack web development bootcamp and decided to build this website for her mother, Helen. <br />
+        Yeonju is an Aggie chemical engineer (class of 2019) and also graduated from a full stack web development bootcamp. She decided to build this website for her mom, Helen. <br />
         If you have experienced any technical issues from this website, please contact her at yeonjupark95@gmail.com
       </div>
     </div>
