@@ -72,7 +72,7 @@ const AddService = ({ token }) => {
             </label>
             <input
               className="my-service-form-input"
-              placeholder="Massage"
+              placeholder="facial, massage, or both"
               value={newService.category}
               onChange={(event) => {
                 setNewService({

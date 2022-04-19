@@ -79,42 +79,46 @@ const Facial = ({ token }) => {
             );
           })}
         </div>
-        <div className="service-menu-title">Package</div>
         <div className="service-menu-container">
-          {both.map((service) => {
-            const { id, name, description, price } = service;
-            return (
-              <div className="service-container">
-                <div className="service-title">
-                  <div className="service-name">{name}</div>
-                  <div className="service-price">{price}</div>
-                </div>
-                <div className="service-description">{description}</div>
-                {token && (
+          {both.length
+            ? both.map((service) => {
+                const { id, name, description, price } = service;
+                return (
                   <>
-                    <button
-                      className="service-button"
-                      onClick={() => {
-                        navigate(`/admin/editservice/${id}`);
-                      }}
-                    >
-                      Edit
-                    </button>
+                    <div className="service-menu-title">Package</div>
+                    <div className="service-container">
+                      <div className="service-title">
+                        <div className="service-name">{name}</div>
+                        <div className="service-price">{price}</div>
+                      </div>
+                      <div className="service-description">{description}</div>
+                      {token && (
+                        <>
+                          <button
+                            className="service-button"
+                            onClick={() => {
+                              navigate(`/admin/editservice/${id}`);
+                            }}
+                          >
+                            Edit
+                          </button>
+                        </>
+                      )}
+                      {token && (
+                        <button
+                          className="service-button"
+                          onClick={() => {
+                            handleDelete(id);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      )}
+                    </div>
                   </>
-                )}
-                {token && (
-                  <button
-                    className="service-button"
-                    onClick={() => {
-                      handleDelete(id);
-                    }}
-                  >
-                    Delete
-                  </button>
-                )}
-              </div>
-            );
-          })}
+                );
+              })
+            : null}
         </div>
       </div>
     </>
