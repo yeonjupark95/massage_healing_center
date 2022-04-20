@@ -7,6 +7,7 @@ import Service from "./Home/Service";
 import Reviews from "./Home/Reviews";
 import Facial from "./Service/Facial";
 import Massage from "./Service/Massage";
+import Wax from "./Service/Wax";
 import AboutUs from "./AboutUs";
 import Appointment from "./Service/Appointment";
 import AdminLogin from "./Admin/AdminLogin";
@@ -89,6 +90,15 @@ const App = () => {
             <>
               <Appointment />
               <Massage token={token} />
+            </>
+          }
+        />
+        <Route
+          path="/wax"
+          element={
+            <>
+              <Appointment />
+              <Wax token={token} />
             </>
           }
         />

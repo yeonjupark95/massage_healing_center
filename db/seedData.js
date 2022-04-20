@@ -103,7 +103,21 @@ const createInitialServices = async () => {
       price: 175,
     });
 
-    const services = [service1, service2, service3, service4, service5];
+    const service6 = await createService({
+      name: "Eyebrows",
+      description: "Eyebrows waxing",
+      category: "wax",
+      price: 20,
+    });
+
+    const service7 = await createService({
+      name: "Full Face",
+      description: "Full face waxing",
+      category: "wax",
+      price: 30,
+    });
+
+    const services = [service1, service2, service3, service4, service5, service6, service7];
     console.log("success creating initial services!");
     console.log("services created:", services);
   } catch (error) {
