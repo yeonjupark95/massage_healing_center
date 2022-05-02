@@ -109,6 +109,14 @@ const App = () => {
           path="/admin/editservice/:serviceId"
           element={<EditService token={token} />}
         />
+        <Route
+          path="/facial-appointment"
+          component={() => {
+            window.location.href =
+              "https://calendly.com/massagehealingcenter/massagehealingcenter";
+            return null;
+          }}
+        />
       </Routes>
     </div>
   );

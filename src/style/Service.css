@@ -61,7 +61,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   margin-bottom: 96px;
-  background-color: #2a4247f3;
+  background-color: #8dd0dd70;
   padding: 0px;
 }
 
@@ -89,10 +89,17 @@
 
 .appointment-button{
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: rgb(122, 114, 114);
+  border: solid 1px;
 }
 
 .appointment-button:hover {
   background-color: #cee3ff;
   color: white;
+}
+
+.appointment-other {
+  margin-top: 20px;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgb(122, 114, 114);
 }
