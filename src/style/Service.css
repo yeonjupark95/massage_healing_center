@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend+Deca:wght@100;200;300;900&family=Noto+Sans:wght@300&family=Noto+Serif:ital@1&family=Vazirmatn:wght@100;200;300;400&display=swap");
 
-.appointmemnt {
-  margin-top: 500px;
+.service-appointment {
+  margin-top: 100px;
 }
 
 .service-menu-title {
@@ -54,4 +54,13 @@
 .service-button:hover {
   background-color: #32527b;
   color: black;
+}
+
+.appointment-section-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 96px;
+  background-color: #EBE6E6;
+  padding: 0px;
 }

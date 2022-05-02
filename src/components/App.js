@@ -79,7 +79,6 @@ const App = () => {
           path="/facials"
           element={
             <>
-              <Appointment />
               <Facial token={token} />
             </>
           }
@@ -88,7 +87,6 @@ const App = () => {
           path="/massage"
           element={
             <>
-              <Appointment />
               <Massage token={token} />
             </>
           }

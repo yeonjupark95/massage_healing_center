@@ -42,7 +42,9 @@ const Facial = ({ token }) => {
 
   return (
     <>
+    <div className="service-appointment">
       <Appointment />
+    </div>
       <div className="menu">
         <div className="service-menu-title">Facial</div>
         <div className="service-menu-container">
