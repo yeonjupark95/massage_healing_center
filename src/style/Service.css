@@ -36,7 +36,7 @@
   margin-right: 40px;
 }
 
-.service-button {
+.service-button, .appointment-button {
   width: fit-content;
   padding: 10px 24px 10px 24px;
   font-family: "Lexend Deca", sans-serif;
@@ -56,11 +56,43 @@
   color: black;
 }
 
-.appointment-section-container{
+.appointment-section-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   margin-bottom: 96px;
-  background-color: #EBE6E6;
+  background-color: #2a4247f3;
   padding: 0px;
+}
+
+.appointment-copy-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.appointment-facial-img{
+    margin-right: 64px;
+    width: 600px;
+}
+
+.appointment-header {
+  font-family: "DM Serif Display", serif;
+  font-size: 48px;
+  color: #ffffff;
+  line-height: 58px;
+  padding-top: 10vh;
+  font-weight: 400;
+  text-align: left;
+  width: 420px;
+  margin-bottom: 16px;
+}
+
+.appointment-button{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.appointment-button:hover {
+  background-color: #cee3ff;
+  color: white;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Appointment from "./Appointment";
+import MassageAppointment from "./MassageAppointment";
 import "../../style/Service.css";
 import { fetchCategory, deleteService } from "../../axios-services/index";
 
@@ -44,7 +44,7 @@ const Massage = ({ token }) => {
 
   return (
     <>
-      <Appointment />
+      <MassageAppointment />
       <div className="menu">
         <div className="service-menu-title">Massage</div>
         <div className="service-menu-container">

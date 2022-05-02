@@ -9,7 +9,6 @@ import Facial from "./Service/Facial";
 import Massage from "./Service/Massage";
 import Wax from "./Service/Wax";
 import AboutUs from "./AboutUs";
-import Appointment from "./Service/Appointment";
 import AdminLogin from "./Admin/AdminLogin";
 import AdminDash from "./Admin/AdminDash";
 import AddService from "./Admin/AddService";
@@ -95,7 +94,6 @@ const App = () => {
           path="/wax"
           element={
             <>
-              <Appointment />
               <Wax token={token} />
             </>
           }

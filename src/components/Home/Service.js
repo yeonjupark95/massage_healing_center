@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../style/Home.css";
 import facial from "../img/home-facial.png";
 import massage from "../img/home-massage.jpeg";
