@@ -9,7 +9,6 @@ import Facial from "./Service/Facial";
 import Massage from "./Service/Massage";
 import Wax from "./Service/Wax";
 import AboutUs from "./AboutUs";
-import Appointment from "./Service/Appointment";
 import AdminLogin from "./Admin/AdminLogin";
 import AdminDash from "./Admin/AdminDash";
 import AddService from "./Admin/AddService";
@@ -79,7 +78,6 @@ const App = () => {
           path="/facials"
           element={
             <>
-              <Appointment />
               <Facial token={token} />
             </>
           }
@@ -88,7 +86,6 @@ const App = () => {
           path="/massage"
           element={
             <>
-              <Appointment />
               <Massage token={token} />
             </>
           }
@@ -97,7 +94,6 @@ const App = () => {
           path="/wax"
           element={
             <>
-              <Appointment />
               <Wax token={token} />
             </>
           }
@@ -112,6 +108,14 @@ const App = () => {
         <Route
           path="/admin/editservice/:serviceId"
           element={<EditService token={token} />}
+        />
+        <Route
+          path="/facial-appointment"
+          component={() => {
+            window.location.href =
+              "https://calendly.com/massagehealingcenter/massagehealingcenter";
+            return null;
+          }}
         />
       </Routes>
     </div>
