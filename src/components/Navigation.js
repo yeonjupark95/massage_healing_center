@@ -22,9 +22,6 @@ const Navigation = ({ token, handleLogOut }) => {
           <Link to="/wax" style={{ textDecoration: "none" }}>
             <div className="service-link">Wax</div>
           </Link>
-          <div className="service-link" style={{ textDecoration: "none" }}>
-            Appointments
-          </div>
           <Link to="/aboutus" style={{ textDecoration: "none" }}>
             <div className="service-link">About Us</div>
           </Link>

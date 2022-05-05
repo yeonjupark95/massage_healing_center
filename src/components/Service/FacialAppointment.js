@@ -1,6 +1,5 @@
 import React from "react";
 import "../../style/Service.css";
-import { Link } from "react-router-dom";
 import facial from "../img/hysonic-1.png";
 
 const FacialAppointment = () => {

@@ -109,7 +109,6 @@ const App = () => {
           path="/admin/editservice/:serviceId"
           element={<EditService token={token} />}
         />
-        />
       </Routes>
     </div>
   );

@@ -5,7 +5,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   margin-bottom: 96px;
-  background-color: #EBE6E6;
+  background-color: #ebe6e6;
   padding: 0px;
 }
 
@@ -20,9 +20,9 @@
 }
 
 .homepage-header {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 48px;
-  color: #5D5B6A;
+  color: #5d5b6a;
   line-height: 58px;
   padding-top: 16vh;
   font-weight: 400;
@@ -32,7 +32,7 @@
 }
 
 .homepage-subhead {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   color: #758184;
   font-size: 20px;
   line-height: 30px;
@@ -45,7 +45,7 @@
 .homepage-service-button {
   width: fit-content;
   padding: 10px 24px 10px 24px;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
@@ -59,13 +59,17 @@
 }
 
 .homepage-service-button:hover {
-  background-color: #5D5B6A;
+  background-color: #5d5b6a;
   color: white;
+}
+
+.faq-container {
+  margin: 100px;
 }
 
 .faq-header {
   font-family: "DM Serif Display", serif;
-  color: #5D5B6A;
+  color: #5d5b6a;
   font-size: 48px;
   text-align: center;
   line-height: 58px;
@@ -76,7 +80,7 @@
 
 .faq-question {
   font-family: "Lexend Deca", sans-serif;
-  color: #5D5B6A;
+  color: #5d5b6a;
   font-size: 25px;
   line-height: 26px;
   font-weight: 300;

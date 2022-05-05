@@ -4,12 +4,17 @@
   margin-top: 100px;
 }
 
-.service-menu-title {
+.service-menu-title, .service-appointment-description {
   font-family: "DM Serif Display", serif;
   margin-top: 10vh;
   text-align: center;
   font-size: 50px;
   color: #5d5b6a;
+}
+
+.service-appointment-description{
+  font-size: 25px;
+  color: #a9a6bd;
 }
 
 .service-container {
@@ -65,6 +70,15 @@
   padding: 0px;
 }
 
+.appointment-section-container.massage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 96px;
+  background-color: #1b1b1b70;
+  padding: 0px;
+}
+
 .appointment-copy-container {
   display: flex;
   flex-flow: column wrap;
@@ -102,4 +116,13 @@
   margin-top: 20px;
   font-family: "Lexend Deca", sans-serif;
   color: rgb(122, 114, 114);
+}
+
+.appointment-other.massage {
+  color: rgb(255, 255, 255);
+}
+
+.menu {
+  margin: 30px;
+  padding-bottom: 60px;
 }
