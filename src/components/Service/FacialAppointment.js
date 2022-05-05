@@ -1,6 +1,5 @@
 import React from "react";
 import "../../style/Service.css";
-import { Link } from "react-router-dom";
 import facial from "../img/hysonic-1.png";
 
 const FacialAppointment = () => {
@@ -12,11 +11,16 @@ const FacialAppointment = () => {
           Relax.
           <br /> Restore. Rejuvenate.
         </div>
-        <Link to="/facial-appointment" style={{ textDecoration: "none" }}>
+        <a
+          href="https://calendly.com/massagehealingcenter/appointment"
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "none" }}
+        >
           <button className="appointment-button">
             SCHEDULE AN APPOINTMENT
           </button>
-        </Link>
+        </a>
         <div className="appointment-other">
           {" "}
           *Text 214-668-7839 for other availabilities{" "}

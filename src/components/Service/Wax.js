@@ -30,6 +30,11 @@ const Wax = ({ token }) => {
 
   return (
     <>
+      <div className="service-appointment">
+        <div className="service-appointment-description">
+        To schedule wax appintment, please text 214-668-7839
+        </div>
+      </div>
       <div className="menu">
         <div className="service-menu-title">Wax</div>
         <div className="service-menu-container">
