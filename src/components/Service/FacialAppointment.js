@@ -11,19 +11,8 @@ const FacialAppointment = () => {
           Relax.
           <br /> Restore. Rejuvenate.
         </div>
-        <a
-          href="https://calendly.com/massagehealingcenter/appointment"
-          target="_blank"
-          rel="noreferrer"
-          style={{ textDecoration: "none" }}
-        >
-          <button className="appointment-button">
-            SCHEDULE AN APPOINTMENT
-          </button>
-        </a>
-        <div className="appointment-other">
-          {" "}
-          *Text 214-668-7839 for other availabilities{" "}
+        <div className="appointment-content">
+        To schedule an appintment, please text 214-668-7839
         </div>
       </div>
     </div>

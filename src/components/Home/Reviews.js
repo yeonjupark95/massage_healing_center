@@ -1,13 +1,8 @@
 import React from "react";
-import "../../style/Home.css";
+import "../../style/index.css";
 
 const Reviews = () => {
-  return(
-    <div className="faq-container">
-        <div className="faq-header">Reviews</div>
-        <div className="faq-answer"></div>
-    </div>
-  )
+  return <></>;
 };
 
 export default Reviews;
