@@ -1,0 +1,36 @@
+.about-container {
+    margin-top: 20vh;
+    margin-left: 14vw;
+    margin-right: 14vw;
+    margin-bottom: 20vh;
+  }
+  
+  .about-header {
+    font-family: "DM Serif Display", serif;
+    color: #5D5B6A;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .about-subheader {
+    font-family: "Lexend Deca", sans-serif;
+    color: #758184;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    font-family: "Lexend Deca", sans-serif;
+    color: #758184;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 48px;
+  }

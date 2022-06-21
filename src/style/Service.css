@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend+Deca:wght@100;200;300;900&family=Noto+Sans:wght@300&family=Noto+Serif:ital@1&family=Vazirmatn:wght@100;200;300;400&display=swap");
+
+.service-appointment {
+  margin-top: 100px;
+}
+
+.service-menu-title, .service-appointment-description {
+  font-family: "DM Serif Display", serif;
+  margin-top: 10vh;
+  text-align: center;
+  font-size: 50px;
+  color: #5d5b6a;
+}
+
+.service-appointment-description{
+  font-size: 25px;
+  color: #a9a6bd;
+}
+
+.service-container {
+  margin: 10vh;
+}
+
+.service-title,
+.service-description {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.service-title {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 1vh;
+  color: #5d5b6a;
+}
+
+.service-description {
+  color: #5d5b6ab0;
+}
+
+.service-name {
+  margin-right: 40px;
+}
+
+.service-button, .appointment-button {
+  width: fit-content;
+  padding: 10px 24px 10px 24px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #5d5b6a;
+  color: white;
+  border: solid 2px;
+  display: flex;
+  align-self: left;
+  text-decoration: none;
+}
+
+.service-button:hover {
+  background-color: #32527b;
+  color: black;
+}
+
+.appointment-section-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 96px;
+  background-color: #8dd0dd70;
+  padding: 0px;
+}
+
+.appointment-section-container.massage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 96px;
+  background-color: #1b1b1b70;
+  padding: 0px;
+}
+
+.appointment-copy-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.appointment-facial-img{
+    margin-right: 64px;
+    width: 600px;
+}
+
+.appointment-header {
+  font-family: "DM Serif Display", serif;
+  font-size: 48px;
+  color: #ffffff;
+  line-height: 58px;
+  padding-top: 10vh;
+  font-weight: 400;
+  text-align: left;
+  width: 420px;
+  margin-bottom: 16px;
+}
+
+.appointment-content{
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  font-size: 20px;
+  color: #79797a;
+}
+
+.appointment-button{
+  background-color: #ffffff;
+  color: rgb(122, 114, 114);
+  border: solid 1px;
+}
+
+.appointment-button:hover {
+  background-color: #cee3ff;
+  color: white;
+}
+
+.appointment-other {
+  margin-top: 20px;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgb(122, 114, 114);
+}
+
+.appointment-other.massage {
+  color: rgb(255, 255, 255);
+}
+
+.menu {
+  margin: 30px;
+  padding-bottom: 60px;
+}
